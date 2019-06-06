@@ -32,6 +32,11 @@ spring:
   cloud:
     config:
       uri: ${vcap.services.${PREFIX:}configserver.credentials.uri:http://${PREFIX:}${configserver.${application.domain:cfapps.io}}}
+      
+  data:
+    mongodb:
+      uri: mongodb://172.16.164.15/UNIDAD_MEDICA
+      
 oauth2:
   client:
     tokenUri: ${vcap.services.${PREFIX:}sso.credentials.tokenUri:}
